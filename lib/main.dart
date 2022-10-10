@@ -6,7 +6,7 @@ void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        drawer: NavigationDrawer(),
+        drawer: const NavigationDrawer(),
         backgroundColor: Colors.red,
         appBar: AppBar(
           title: const Text('Dicee'),
