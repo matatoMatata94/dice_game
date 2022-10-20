@@ -10,6 +10,7 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.black87,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,49 +29,97 @@ class NavigationDrawer extends StatelessWidget {
         ),
       );
 
-  Widget buildDicePageItems(BuildContext context) => Wrap(
-        runSpacing: 16,
+  Widget buildDicePageItems(BuildContext context) => Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          const SizedBox(
+            height: 100,
+          ),
           ListTile(
-              title: const Text('1 Würfel'),
+              title: const SizedBox(
+                height: 75,
+                child: Image(
+                  image: AssetImage('images/dice1.png'),
+                ),
+              ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => OneDicePage(),
+                      builder: (context) => const OneDicePage(),
                     ),
                   )),
+          const SizedBox(
+            height: 30,
+          ),
           ListTile(
-              title: const Text('2 Würfel'),
+              title: const SizedBox(
+                height: 75,
+                child: Image(
+                  image: AssetImage('images/dice2.png'),
+                ),
+              ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => TwoDicePage(),
+                      builder: (context) => const TwoDicePage(),
                     ),
                   )),
+          const SizedBox(
+            height: 30,
+          ),
           ListTile(
-              title: const Text('3 Würfel'),
+              title: const SizedBox(
+                height: 75,
+                child: Image(
+                  image: AssetImage('images/dice3.png'),
+                ),
+              ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => ThreeDicePage(),
+                      builder: (context) => const ThreeDicePage(),
                     ),
                   )),
+          const SizedBox(
+            height: 30,
+          ),
           ListTile(
-              title: const Text('4 Würfel'),
+              title: const SizedBox(
+                height: 75,
+                child: Image(
+                  image: AssetImage('images/dice4.png'),
+                ),
+              ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => FourDicePage(),
+                      builder: (context) => const FourDicePage(),
                     ),
                   )),
+          const SizedBox(
+            height: 30,
+          ),
           ListTile(
-              title: const Text('5 Würfel'),
+              title: const SizedBox(
+                height: 75,
+                child: Image(
+                  image: AssetImage('images/dice5.png'),
+                ),
+              ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => FiveDicePage(),
+                      builder: (context) => const FiveDicePage(),
                     ),
                   )),
+          const SizedBox(
+            height: 30,
+          ),
           ListTile(
-              title: const Text('6 Würfel'),
+              title: const SizedBox(
+                height: 75,
+                child: Image(
+                  image: AssetImage('images/dice6.png'),
+                ),
+              ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
-                      builder: (context) => OneDicePage(),
+                      builder: (context) => const SixDicePage(),
                     ),
                   )),
         ],

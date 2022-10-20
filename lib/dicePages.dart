@@ -1,3 +1,4 @@
+import 'package:dice_game/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
 class OneDicePage extends StatelessWidget {
@@ -6,6 +7,10 @@ class OneDicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Column(
 //        crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -47,6 +52,10 @@ class TwoDicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Column(
 //        crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -96,6 +105,10 @@ class ThreeDicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Center(
         child: Column(
@@ -149,6 +162,10 @@ class FourDicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Column(
 //        crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -219,6 +236,10 @@ class FiveDicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Column(
 //        crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -304,6 +325,10 @@ class SixDicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Column(
 //        crossAxisAlignment: CrossAxisAlignment.stretch,
