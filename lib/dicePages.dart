@@ -1,8 +1,31 @@
 import 'package:dice_game/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
-class OneDicePage extends StatelessWidget {
+class OneDicePage extends StatefulWidget {
   const OneDicePage({super.key});
+
+  @override
+  State<OneDicePage> createState() => _OneDicePageState();
+}
+
+class _OneDicePageState extends State<OneDicePage>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  @override
+  void initState() {
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 1000),
+      vsync: this,
+    );
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +41,22 @@ class OneDicePage extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
+            children: [
               Expanded(
                 child: Padding(
-                  padding: EdgeInsets.all(110.0),
-                  child: Image(
-                    image: AssetImage('images/dice1.png'),
+                  padding: const EdgeInsets.all(110.0),
+                  child: RotationTransition(
+                    turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
+                    child: const Image(
+                      image: AssetImage('images/dice1.png'),
+                    ),
                   ),
                 ),
               ),
             ],
           ),
           MaterialButton(
-            onPressed: () {},
+            onPressed: () => _controller.forward(),
             color: Colors.black38,
             height: 64,
             minWidth: 256,
