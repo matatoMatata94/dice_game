@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:dice_game/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,8 @@ class OneDicePage extends StatefulWidget {
 class _OneDicePageState extends State<OneDicePage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
+  bool _isRolling = false;
+  late int diceNumber = 1;
 
   @override
   void initState() {
@@ -46,24 +50,32 @@ class _OneDicePageState extends State<OneDicePage>
                 child: Padding(
                   padding: const EdgeInsets.all(110.0),
                   child: RotationTransition(
-                    turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
-                    child: const Image(
-                      image: AssetImage('images/dice1.png'),
-                    ),
-                  ),
+                      turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
+                      child: Image.asset('images/dice$diceNumber.png')),
                 ),
               ),
             ],
           ),
           MaterialButton(
-            onPressed: () => _controller.forward(),
             color: Colors.black38,
             height: 64,
             minWidth: 256,
-            //The logo of a rolling dice would be better
-            child: const Text(
-              "Roll",
-              style: TextStyle(fontSize: 36, color: Colors.white),
+            onPressed: () {
+              if (_isRolling) {
+                _controller.reset();
+              } else {
+                _controller.repeat();
+              }
+              setState(
+                () {
+                  _isRolling = !_isRolling;
+                  diceNumber = Random().nextInt(6) + 1;
+                },
+              );
+            },
+            child: Text(
+              _isRolling ? "Stop" : "Roll",
+              style: const TextStyle(fontSize: 36, color: Colors.white),
             ),
           )
         ],
