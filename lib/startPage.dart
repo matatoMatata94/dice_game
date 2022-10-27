@@ -11,7 +11,6 @@ class StartPage extends StatelessWidget {
       color: Colors.red,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//        crossAxisAlignment: CrossAxisAlignment.baseline,
         children: [
           const Text(
             "Dicee",
@@ -20,6 +19,7 @@ class StartPage extends StatelessWidget {
               fontSize: 90,
             ),
           ),
+          //With the next 6 buttons you can choose with how many dices you want to play
           MaterialButton(
             onPressed: () {
               Navigator.push(context,

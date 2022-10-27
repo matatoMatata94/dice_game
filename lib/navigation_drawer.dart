@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'dicePages.dart';
 
-//other animation
-
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
 
@@ -36,11 +34,9 @@ class NavigationDrawer extends StatelessWidget {
             height: 100,
           ),
           ListTile(
-              title: const SizedBox(
+              title: SizedBox(
                 height: 75,
-                child: Image(
-                  image: AssetImage('images/dice1.png'),
-                ),
+                child: Image.asset('images/dice1.png'),
               ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
@@ -51,11 +47,9 @@ class NavigationDrawer extends StatelessWidget {
             height: 30,
           ),
           ListTile(
-              title: const SizedBox(
+              title: SizedBox(
                 height: 75,
-                child: Image(
-                  image: AssetImage('images/dice2.png'),
-                ),
+                child: Image.asset('images/dice2.png'),
               ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
@@ -66,11 +60,9 @@ class NavigationDrawer extends StatelessWidget {
             height: 30,
           ),
           ListTile(
-              title: const SizedBox(
+              title: SizedBox(
                 height: 75,
-                child: Image(
-                  image: AssetImage('images/dice3.png'),
-                ),
+                child: Image.asset('images/dice3.png'),
               ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
@@ -81,11 +73,9 @@ class NavigationDrawer extends StatelessWidget {
             height: 30,
           ),
           ListTile(
-              title: const SizedBox(
+              title: SizedBox(
                 height: 75,
-                child: Image(
-                  image: AssetImage('images/dice4.png'),
-                ),
+                child: Image.asset('images/dice4.png'),
               ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
@@ -96,11 +86,9 @@ class NavigationDrawer extends StatelessWidget {
             height: 30,
           ),
           ListTile(
-              title: const SizedBox(
+              title: SizedBox(
                 height: 75,
-                child: Image(
-                  image: AssetImage('images/dice5.png'),
-                ),
+                child: Image.asset('images/dice5.png'),
               ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
@@ -111,11 +99,9 @@ class NavigationDrawer extends StatelessWidget {
             height: 30,
           ),
           ListTile(
-              title: const SizedBox(
+              title: SizedBox(
                 height: 75,
-                child: Image(
-                  image: AssetImage('images/dice6.png'),
-                ),
+                child: Image.asset('images/dice6.png'),
               ),
               onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(

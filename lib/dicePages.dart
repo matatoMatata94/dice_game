@@ -119,10 +119,10 @@ class _TwoDicePageState extends State<TwoDicePage>
       appBar: AppBar(
         backgroundColor: Colors.red,
       ),
+      //I added the Drawer so you can easily switch between the dice sets
       drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Column(
-//        crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
