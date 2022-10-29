@@ -40,7 +40,6 @@ class _OneDicePageState extends State<OneDicePage>
       drawer: const NavigationDrawer(),
       backgroundColor: Colors.red,
       body: Column(
-//        crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
