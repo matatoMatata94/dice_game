@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'dicePages.dart';
+import '1DicePage.dart';
+import '2DicePage.dart';
+import '3DicePage.dart';
+import '4DicePage.dart';
+import '5DicePage.dart';
+import '6DicePage.dart';
+
+const Color backgroundColor = Colors.red;
+const double headerTextSize = 90;
+const Color headerTextColor = Colors.white;
+const Color buttonColor = Colors.redAccent;
+const Color buttonTextColor = Colors.white;
+const double buttonTextSize = 45;
 
 class StartPage extends StatelessWidget {
   const StartPage({Key? key}) : super(key: key);
@@ -8,15 +20,15 @@ class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: backgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           const Text(
             "Dicee",
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 90,
+              color: headerTextColor,
+              fontSize: headerTextSize,
             ),
           ),
           //With the next 6 buttons you can choose with how many dices you want to play
@@ -25,13 +37,13 @@ class StartPage extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const OneDicePage()));
             },
-            color: Colors.redAccent,
+            color: buttonColor,
             padding: const EdgeInsets.all(16),
             child: const Text(
               "1 Dice",
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
+                color: buttonTextColor,
+                fontSize: buttonTextSize,
               ),
             ),
           ),
@@ -40,13 +52,13 @@ class StartPage extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const TwoDicePage()));
             },
-            color: Colors.redAccent,
+            color: buttonColor,
             padding: const EdgeInsets.all(16),
             child: const Text(
               "2 Dice",
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
+                color: buttonTextColor,
+                fontSize: buttonTextSize,
               ),
             ),
           ),
@@ -57,13 +69,13 @@ class StartPage extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const ThreeDicePage()));
             },
-            color: Colors.redAccent,
+            color: buttonColor,
             padding: const EdgeInsets.all(16),
             child: const Text(
               "3 Dice",
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
+                color: buttonTextColor,
+                fontSize: buttonTextSize,
               ),
             ),
           ),
@@ -74,13 +86,13 @@ class StartPage extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const FourDicePage()));
             },
-            color: Colors.redAccent,
+            color: buttonColor,
             padding: const EdgeInsets.all(16),
             child: const Text(
               "4 Dice",
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
+                color: buttonTextColor,
+                fontSize: buttonTextSize,
               ),
             ),
           ),
@@ -91,13 +103,13 @@ class StartPage extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => const FiveDicePage()));
             },
-            color: Colors.redAccent,
+            color: buttonColor,
             padding: const EdgeInsets.all(16),
             child: const Text(
               "5 Dice",
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
+                color: buttonTextColor,
+                fontSize: buttonTextSize,
               ),
             ),
           ),
@@ -106,13 +118,13 @@ class StartPage extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const SixDicePage()));
             },
-            color: Colors.redAccent,
+            color: buttonColor,
             padding: const EdgeInsets.all(16),
             child: const Text(
               "6 Dice",
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 45,
+                color: buttonTextColor,
+                fontSize: buttonTextSize,
               ),
             ),
           ),

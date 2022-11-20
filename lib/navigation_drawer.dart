@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'dicePages.dart';
+import '1DicePage.dart';
+import '2DicePage.dart';
+import '3DicePage.dart';
+import '4DicePage.dart';
+import '5DicePage.dart';
+import '6DicePage.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key? key}) : super(key: key);
